@@ -1,0 +1,58 @@
+import random
+argentina = 0
+messico = 0
+polonia = 0
+arabia = 0
+arg = 50
+mex = 20
+pol = 22
+ksa = 11
+argmex = random.choice(range(1, arg+mex))
+if argmex>arg+5:
+    messico = messico+3
+elif arg+5>=argmex>=arg-5:
+    messico = messico+1
+    argentina = argentina+1
+elif arg-5>argmex:
+    argentina = argentina+3
+polksa = random.choice(range(1, pol+ksa))
+if polksa>pol+5:
+    arabia = arabia+3
+elif pol+5>=polksa>=pol-5:
+    arabia = arabia+1
+    polonia = polonia+1
+elif pol-5>polksa:
+    polonia = polonia+3
+print("p " + str(polonia))
+print("k" + str(argentina))
+polarg = random.choice(range(1, pol+arg))
+if polarg>arg+5:
+    polonia = polonia+3
+elif arg+5>=polarg>=arg-5:
+    argentina = argentina+1
+    polonia = polonia+1
+elif arg-5>polarg:
+    argentina = argentina+3
+print("p " + str(polonia))
+print("k" + str(argentina))
+ksamex = random.choice(range(1, ksa+mex))
+if ksamex>mex+5:
+    arabia = arabia+3
+elif mex+5>=ksamex>=mex-5:
+    messico = argentina+1
+    arabia = polonia+1
+elif mex-5>ksamex:
+    messico = messico+3
+print(argmex)
+print(polksa)
+print(polarg)
+print(ksamex)
+
+print("argentina: " + str(argentina))
+print("messico: " + str(messico))
+print("polonia: " + str(polonia))
+print("arabia: " + str(arabia))
+argentina = 0
+messico = 0
+polonia = 0
+arabia = 0
